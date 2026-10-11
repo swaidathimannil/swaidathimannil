@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style directions · Bold &amp; modern · @swaidathimannil</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,opsz,wght@0,9..144,600..800;1,9..144,600..800&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <style>
+    /* ---------- Presentation wrapper ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eceef1;
+      color: #16161a;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, p { margin: 0; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .intro { padding-top: 56px; padding-bottom: 8px; }
+    .kicker { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #6a6f7d; margin-bottom: 14px; }
+    .intro h1 { font-size: clamp(32px, 4.4vw, 52px); letter-spacing: -.03em; line-height: 1.05; margin-bottom: 16px; text-wrap: balance; }
+    .lede { font-size: 18px; line-height: 1.6; color: #454a57; max-width: 760px; margin-bottom: 24px; }
+    .jump { display: flex; flex-wrap: wrap; gap: 10px; }
+    .jump a {
+      display: inline-flex; gap: 8px; align-items: center; text-decoration: none; color: #16161a;
+      background: #fff; border: 1px solid #dcdfe5; border-radius: 999px; padding: 8px 15px; font-weight: 600; font-size: 14px;
+      transition: border-color .2s, transform .2s;
+    }
+    .jump a:hover { border-color: #16161a; transform: translateY(-1px); }
+    .jump b { font-weight: 800; }
+
+    .dir { padding-top: 44px; padding-bottom: 20px; scroll-margin-top: 16px; }
+    .dir-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 48px; align-items: flex-end; margin-bottom: 20px; }
+    .dir-title { display: flex; gap: 16px; align-items: flex-start; max-width: 660px; }
+    .letter { flex: none; width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-weight: 800; font-size: 24px; }
+    .letter--a { background: #07080c; color: #c5ff3d; font-family: "JetBrains Mono", ui-monospace, monospace; box-shadow: 0 0 0 1px #1f2533, 0 0 18px -4px rgba(197,255,61,.6); }
+    .letter--b { background: linear-gradient(135deg, #7c3aed, #ec4899 55%, #f97316); color: #fff; font-family: "Plus Jakarta Sans", sans-serif; border-radius: 18px; }
+    .letter--c { background: #ffe500; color: #0a0a0a; font-family: "Archivo Black", Impact, sans-serif; border: 3px solid #0a0a0a; border-radius: 0; box-shadow: 4px 4px 0 #0a0a0a; }
+    .letter--d { background: #f4efe6; color: #ff4a1c; font-family: "Fraunces", Georgia, serif; font-style: italic; border: 1px solid #141414; border-radius: 50%; }
+    .dir-title h2 { margin: 3px 0 6px; font-size: 26px; letter-spacing: -.02em; }
+    .dir-title p { color: #4b5060; line-height: 1.55; }
+    .best { margin-top: 8px !important; font-size: 14px; }
+    .best b { color: #16161a; }
+    .spec { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+    .swatches { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
+    .swatches li { width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(0,0,0,.14); }
+    .fonts { font-size: 13px; color: #4b5060; }
+    .fonts b { color: #16161a; font-weight: 600; }
+
+    .frame { border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 34px 70px -34px rgba(15,18,30,.5), 0 0 0 1px rgba(15,18,30,.08); }
+    .bar { display: flex; align-items: center; gap: 8px; padding: 11px 14px; background: #f6f6f8; border-bottom: 1px solid #e6e7ea; }
+    .bar i { width: 11px; height: 11px; border-radius: 50%; background: #ff5f57; }
+    .bar i:nth-child(2) { background: #febc2e; }
+    .bar i:nth-child(3) { background: #28c840; }
+    .url { margin: 0 auto; transform: translateX(-27px); background: #fff; border: 1px solid #e3e4e8; border-radius: 8px; padding: 4px 18px; font-size: 12px; color: #6a6f7d; min-width: 220px; text-align: center; }
+    .site { position: relative; overflow: hidden; }
+    .site h3, .site h4 { text-wrap: balance; }
+
+    .outro { padding-top: 36px; padding-bottom: 80px; }
+    .outro .box { background: #16161a; color: #fff; border-radius: 20px; padding: 30px 32px; display: grid; gap: 14px; }
+    .outro h2 { font-size: 24px; letter-spacing: -.02em; }
+    .outro p { color: #c9ccd6; line-height: 1.6; }
+    .outro code { background: rgba(255,255,255,.12); color: #fff; padding: 3px 8px; border-radius: 6px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 14px; }
+
+    /* ---------- A · Neon Night ---------- */
+    .a-site {
+      background-color: #07080c; color: #e6e8ee; font-family: "Space Grotesk", system-ui, sans-serif;
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    .a-glow { position: absolute; width: 560px; height: 560px; right: -160px; top: -200px; background: radial-gradient(circle, rgba(197,255,61,.26), transparent 65%); pointer-events: none; }
+    .a-glow--2 { right: auto; left: -220px; top: 320px; background: radial-gradient(circle, rgba(56,225,255,.14), transparent 65%); }
+    .a-nav { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 22px 40px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 14px; }
+    .a-logo { color: #c5ff3d; font-weight: 600; }
+    .a-cursor { display: inline-block; width: .55em; height: 1.05em; margin-left: 4px; vertical-align: -.18em; background: #c5ff3d; animation: a-blink 1.1s steps(1) infinite; }
+    @keyframes a-blink { 50% { opacity: 0; } }
+    .a-links { display: flex; gap: 26px; align-items: center; color: #9aa0b2; }
+    .a-links span { transition: color .2s; }
+    .a-links span:hover { color: #fff; }
+    .a-pill { border: 1px solid #c5ff3d; color: #c5ff3d !important; padding: 6px 14px; border-radius: 999px; }
+    .a-hero { position: relative; padding: 64px 40px 40px; max-width: 880px; }
+    .a-eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 14px; color: #38e1ff; margin-bottom: 22px; }
+    .a-prompt { color: #c5ff3d; }
+    .a-h { font-size: clamp(34px, 5.4vw, 68px); line-height: 1.02; letter-spacing: -.035em; font-weight: 700; }
+    .a-hl { color: #c5ff3d; text-shadow: 0 0 28px rgba(197,255,61,.45); }
+    .a-sub { color: #9aa0b2; font-size: 18px; line-height: 1.6; max-width: 560px; margin: 24px 0 32px; }
+    .a-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+    .a-btn { background: #c5ff3d; color: #07080c; font-weight: 700; padding: 14px 22px; border-radius: 10px; font-size: 15px; transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .a-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px -8px rgba(197,255,61,.6); }
+    .a-btn--ghost { background: transparent; color: #e6e8ee; border: 1px solid #2a3040; }
+    .a-btn--ghost:hover { border-color: #38e1ff; box-shadow: none; }
+    .a-posts { position: relative; padding: 28px 40px 48px; }
+    .a-label { font-family: "JetBrains Mono", ui-monospace, monospace; color: #5d6478; font-size: 13px; margin-bottom: 16px; }
+    .a-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .a-card { background: rgba(16,19,26,.88); border: 1px solid #1f2533; border-radius: 14px; padding: 20px; transition: border-color .25s, transform .25s; }
+    .a-card:hover { border-color: #c5ff3d; transform: translateY(-3px); }
+    .a-meta { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; color: #6b7286; }
+    .a-card h4 { margin: 10px 0 16px; font-size: 18px; line-height: 1.3; font-weight: 600; }
+    .a-tags { display: flex; gap: 10px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; color: #38e1ff; }
+
+    /* ---------- B · Gradient Pop ---------- */
+    .b-site { background: #fffaf6; color: #1b1530; font-family: "Plus Jakarta Sans", system-ui, sans-serif; }
+    .b-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; pointer-events: none; animation: b-drift 14s ease-in-out infinite alternate; }
+    .b-blob--1 { width: 420px; height: 420px; background: #a78bfa; top: -120px; right: 10%; }
+    .b-blob--2 { width: 360px; height: 360px; background: #f472b6; top: 60px; right: -80px; animation-delay: -4s; }
+    .b-blob--3 { width: 300px; height: 300px; background: #fdba74; top: 250px; right: 24%; animation-delay: -8s; }
+    @keyframes b-drift { to { transform: translate(-40px, 30px) scale(1.08); } }
+    .b-nav { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 22px 40px; }
+    .b-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; }
+    .b-mark { width: 38px; height: 38px; border-radius: 12px; background: linear-gradient(135deg, #7c3aed, #ec4899 55%, #f97316); color: #fff; display: grid; place-items: center; font-size: 14px; font-weight: 800; }
+    .b-links { display: flex; gap: 4px; align-items: center; font-weight: 600; font-size: 15px; color: #4a4560; }
+    .b-links span { padding: 8px 14px; border-radius: 999px; transition: background .2s; }
+    .b-links span:hover { background: rgba(124,58,237,.08); }
+    .b-links .b-cta { background: #1b1530; color: #fff; margin-left: 6px; }
+    .b-links .b-cta:hover { background: #2d2450; }
+    .b-hero { position: relative; padding: 56px 40px 36px; max-width: 840px; }
+    .b-chip { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #eee4f7; border-radius: 999px; padding: 7px 14px; font-size: 14px; font-weight: 600; color: #5b5670; box-shadow: 0 4px 14px -6px rgba(124,58,237,.3); margin-bottom: 22px; }
+    .b-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.18); }
+    .b-h { font-size: clamp(36px, 5.6vw, 72px); line-height: 1.02; letter-spacing: -.035em; font-weight: 800; }
+    .b-grad { background: linear-gradient(90deg, #7c3aed, #ec4899, #f97316); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+    .b-sub { font-size: 19px; line-height: 1.6; color: #5b5670; max-width: 560px; margin: 22px 0 30px; }
+    .b-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .b-btn { padding: 15px 26px; border-radius: 999px; font-weight: 700; font-size: 16px; background: linear-gradient(90deg, #7c3aed, #ec4899, #f97316); color: #fff; box-shadow: 0 12px 30px -10px rgba(236,72,153,.6); transition: transform .2s; }
+    .b-btn:hover { transform: translateY(-2px) scale(1.02); }
+    .b-btn--light { background: #fff; color: #1b1530; box-shadow: 0 6px 20px -10px rgba(27,21,48,.3); border: 1px solid #eee4f7; }
+    .b-posts { position: relative; padding: 24px 40px 48px; }
+    .b-label { font-weight: 800; font-size: 22px; letter-spacing: -.02em; margin-bottom: 16px; }
+    .b-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .b-card { background: #fff; border-radius: 22px; padding: 22px; border: 1px solid #f1eaf8; box-shadow: 0 10px 30px -18px rgba(27,21,48,.35); transition: transform .25s, box-shadow .25s; }
+    .b-card:hover { transform: translateY(-4px) rotate(-.5deg); box-shadow: 0 18px 40px -18px rgba(124,58,237,.45); }
+    .b-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 5px 11px; border-radius: 999px; }
+    .b-tag--v { background: #f1e9ff; color: #6d28d9; }
+    .b-tag--p { background: #ffe4f1; color: #be185d; }
+    .b-tag--o { background: #ffedd5; color: #c2410c; }
+    .b-card h4 { font-size: 19px; line-height: 1.3; letter-spacing: -.01em; margin: 14px 0 10px; }
+    .b-meta { font-size: 13px; font-weight: 600; color: #8a85a0; }
+
+    /* ---------- C · Brutalist Bold ---------- */
+    .c-site { background: #fffdf2; color: #0a0a0a; font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    .c-nav { display: flex; justify-content: space-between; align-items: stretch; border-bottom: 3px solid #0a0a0a; }
+    .c-logo { background: #0a0a0a; color: #ffe500; font-family: "Archivo Black", Impact, sans-serif; font-size: 22px; padding: 16px 24px; letter-spacing: .02em; }
+    .c-links { display: flex; }
+    .c-links span { display: flex; align-items: center; padding: 0 22px; border-left: 3px solid #0a0a0a; font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: .06em; transition: background .15s; }
+    .c-links span:hover { background: #ffe500; }
+    .c-marquee { overflow: hidden; white-space: nowrap; background: #ffe500; border-bottom: 3px solid #0a0a0a; padding: 10px 0; font-family: "Archivo Black", Impact, sans-serif; font-size: 18px; }
+    .c-track { display: inline-block; animation: c-marquee 22s linear infinite; }
+    @keyframes c-marquee { to { transform: translateX(-50%); } }
+    .c-hero { position: relative; padding: 52px 40px 44px; }
+    .c-h { font-family: "Archivo Black", Impact, sans-serif; font-weight: 400; font-size: clamp(38px, 6.4vw, 84px); line-height: .98; text-transform: uppercase; letter-spacing: -.01em; max-width: 900px; }
+    .c-mark { background: #ffe500; padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .c-sub { font-size: 17px; line-height: 1.6; max-width: 620px; margin: 26px 0 32px; }
+    .c-ctas { display: flex; flex-wrap: wrap; gap: 18px; }
+    .c-btn { display: inline-block; background: #ffe500; border: 3px solid #0a0a0a; box-shadow: 6px 6px 0 #0a0a0a; padding: 14px 22px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: 15px; transition: transform .12s, box-shadow .12s; }
+    .c-btn:hover { transform: translate(3px, 3px); box-shadow: 3px 3px 0 #0a0a0a; }
+    .c-btn--white { background: #fff; }
+    .c-sticker {
+      position: absolute; right: 48px; top: 44px; width: 136px; height: 136px; border-radius: 50%;
+      border: 3px solid #0a0a0a; background: #fff; box-shadow: 5px 5px 0 #0a0a0a;
+      display: grid; place-items: center; text-align: center; font-family: "Archivo Black", Impact, sans-serif; font-size: 17px; line-height: 1.05;
+      transform: rotate(12deg); transition: transform .3s;
+    }
+    .c-sticker:hover { transform: rotate(-6deg) scale(1.05); }
+    .c-posts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 3px solid #0a0a0a; }
+    .c-card { padding: 22px 24px 28px; border-right: 3px solid #0a0a0a; transition: background .15s; }
+    .c-card:last-child { border-right: 0; }
+    .c-card:hover { background: #ffe500; }
+    .c-num { font-family: "Archivo Black", Impact, sans-serif; font-size: 46px; line-height: 1; margin-bottom: 12px; }
+    .c-card h4 { font-family: "Archivo Black", Impact, sans-serif; font-weight: 400; font-size: 20px; line-height: 1.15; text-transform: uppercase; margin-bottom: 12px; }
+    .c-meta { font-size: 13px; }
+
+    /* ---------- D · Editorial Tech ---------- */
+    .d-site { background: #f4efe6; color: #141414; font-family: "Inter", system-ui, sans-serif; padding: 0 40px 44px; }
+    .d-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #141414; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    .d-top span:last-child { color: #ff4a1c; }
+    .d-mast { text-align: center; padding: 26px 0 18px; border-bottom: 4px double #141414; }
+    .d-name { font-family: "Fraunces", Georgia, serif; font-size: clamp(42px, 6.4vw, 80px); font-weight: 800; letter-spacing: -.035em; line-height: 1; }
+    .d-tagline { margin-top: 10px !important; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #555; }
+    .d-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 30px; padding: 12px 0; border-bottom: 1px solid #141414; font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .d-nav span { position: relative; }
+    .d-nav span::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: #ff4a1c; transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+    .d-nav span:hover::after { transform: scaleX(1); }
+    .d-grid { display: grid; grid-template-columns: 2fr 1fr; margin-top: 30px; }
+    .d-lead { padding-right: 34px; border-right: 1px solid #141414; }
+    .d-kicker { color: #ff4a1c; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+    .d-h { font-family: "Fraunces", Georgia, serif; font-size: clamp(34px, 4.8vw, 60px); line-height: 1.02; letter-spacing: -.03em; font-weight: 800; }
+    .d-h em { color: #ff4a1c; font-style: italic; font-weight: 600; }
+    .d-sub { font-size: 18px; line-height: 1.65; color: #333; max-width: 580px; margin: 22px 0 26px; }
+    .d-sub::first-letter { font-family: "Fraunces", Georgia, serif; float: left; font-size: 60px; line-height: .9; padding: 5px 9px 0 0; font-weight: 800; color: #141414; }
+    .d-ctas { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+    .d-btn { background: #141414; color: #f4efe6; padding: 13px 22px; font-weight: 600; font-size: 15px; transition: background .2s; }
+    .d-btn:hover { background: #ff4a1c; }
+    .d-link { font-weight: 600; border-bottom: 2px solid #ff4a1c; padding-bottom: 2px; }
+    .d-side { padding-left: 30px; }
+    .d-side-title { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding-bottom: 10px; border-bottom: 1px solid #141414; }
+    .d-item { display: grid; grid-template-columns: 38px 1fr; gap: 8px; padding: 15px 0; border-bottom: 1px solid rgba(20,20,20,.25); }
+    .d-n { font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 800; color: #ff4a1c; line-height: 1; }
+    .d-item h4 { font-family: "Fraunces", Georgia, serif; font-size: 19px; line-height: 1.25; font-weight: 600; margin-bottom: 6px; }
+    .d-meta { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #666; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .wrap { padding-left: 16px; padding-right: 16px; }
+      .a-nav, .b-nav { padding: 18px 22px; }
+      .a-hero, .b-hero, .c-hero { padding-left: 22px; padding-right: 22px; }
+      .a-posts, .b-posts { padding-left: 22px; padding-right: 22px; }
+      .a-grid, .b-grid, .c-posts, .d-grid { grid-template-columns: 1fr; }
+      .a-links span:not(.a-pill), .b-links span:not(.b-cta) { display: none; }
+      .c-links span:not(:last-child) { display: none; }
+      .c-card { border-right: 0; border-bottom: 3px solid #0a0a0a; }
+      .c-card:last-child { border-bottom: 0; }
+      .c-sticker { display: none; }
+      .d-site { padding: 0 22px 36px; }
+      .d-lead { padding-right: 0; border-right: 0; }
+      .d-side { padding-left: 0; margin-top: 34px; }
+      .url { min-width: 0; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="intro wrap">
+    <p class="kicker">Discovery · Question 6.1 · Prepared for @swaidathimannil</p>
+    <h1>Four ways to be bold &amp; modern</h1>
+    <p class="lede">These are quick style explorations to help you choose a direction. They are not final designs. Pick the one that feels most like you, or mix two (e.g. “B’s colours with D’s layout”). All names and text are placeholders; your real copy comes after discovery. Hover over the buttons and cards to see each direction’s motion style.</p>
+    <nav class="jump" aria-label="Jump to a direction">
+      <a href="#a"><b>A</b> Neon Night</a>
+      <a href="#b"><b>B</b> Gradient Pop</a>
+      <a href="#c"><b>C</b> Brutalist Bold</a>
+      <a href="#d"><b>D</b> Editorial Tech</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== A ===================== -->
+    <section class="dir wrap" id="a" aria-labelledby="a-title">
+      <div class="dir-head">
+        <div class="dir-title">
+          <span class="letter letter--a" aria-hidden="true">A</span>
+          <div>
+            <h2 id="a-title">Neon Night</h2>
+            <p>A dark background with an electric lime accent, terminal-style details and a soft glow. Unmistakably “developer”.</p>
+            <p class="best"><b>Best for:</b> code-heavy tutorials and an instantly techy first impression.</p>
+          </div>
+        </div>
+        <div class="spec">
+          <ul class="swatches" aria-label="Colour palette">
+            <li style="background:#07080c" title="#07080C"></li>
+            <li style="background:#10131a" title="#10131A"></li>
+            <li style="background:#e6e8ee" title="#E6E8EE"></li>
+            <li style="background:#c5ff3d" title="#C5FF3D"></li>
+            <li style="background:#38e1ff" title="#38E1FF"></li>
+          </ul>
+          <p class="fonts"><b>Space Grotesk</b> + <b>JetBrains Mono</b></p>
+        </div>
+      </div>
+
+      <div class="frame" role="img" aria-label="Homepage preview in the Neon Night style">
+        <div class="bar"><i></i><i></i><i></i><span class="url">yourname.dev</span></div>
+        <div class="site a-site">
+          <div class="a-glow" aria-hidden="true"></div>
+          <div class="a-glow a-glow--2" aria-hidden="true"></div>
+          <div class="a-nav">
+            <span class="a-logo">~/yourname<span class="a-cursor" aria-hidden="true"></span></span>
+            <span class="a-links"><span>blog</span><span>projects</span><span>about</span><span class="a-pill">subscribe</span></span>
+          </div>
+          <div class="a-hero">
+            <p class="a-eyebrow"><span class="a-prompt">$</span> whoami → developer · writer · builder</p>
+            <h3 class="a-h">I build things for the web &amp; <span class="a-hl">write about what I learn.</span></h3>
+            <p class="a-sub">Tutorials, deep dives and honest notes on shipping software. A new post every other week.</p>
+            <div class="a-ctas"><span class="a-btn">Read the blog →</span><span class="a-btn a-btn--ghost">Get the newsletter</span></div>
+          </div>
+          <div class="a-posts">
+            <p class="a-label">// latest posts</p>
+            <div class="a-grid">
+              <div class="a-card"><p class="a-meta">Oct 2026 · 6 min read</p><h4>What I learned shipping my first side project</h4><p class="a-tags"><span>#career</span><span>#webdev</span></p></div>
+              <div class="a-card"><p class="a-meta">Sep 2026 · 9 min read</p><h4>Docker, explained like you’re new to it</h4><p class="a-tags"><span>#devops</span><span>#tutorial</span></p></div>
+              <div class="a-card"><p class="a-meta">Sep 2026 · 4 min read</p><h4>The terminal tools I can’t work without</h4><p class="a-tags"><span>#tools</span><span>#productivity</span></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== B ===================== -->
+    <section class="dir wrap" id="b" aria-labelledby="b-title">
+      <div class="dir-head">
+        <div class="dir-title">
+          <span class="letter letter--b" aria-hidden="true">B</span>
+          <div>
+            <h2 id="b-title">Gradient Pop</h2>
+            <p>Bright and airy, with vivid violet → pink → orange gradients, big rounded headlines and playful cards. Energetic and friendly.</p>
+            <p class="best"><b>Best for:</b> approachable explainers and a broad, beginner-friendly audience.</p>
+          </div>
+        </div>
+        <div class="spec">
+          <ul class="swatches" aria-label="Colour palette">
+            <li style="background:#fffaf6" title="#FFFAF6"></li>
+            <li style="background:#1b1530" title="#1B1530"></li>
+            <li style="background:#7c3aed" title="#7C3AED"></li>
+            <li style="background:#ec4899" title="#EC4899"></li>
+            <li style="background:#f97316" title="#F97316"></li>
+          </ul>
+          <p class="fonts"><b>Plus Jakarta Sans</b> (headings &amp; body)</p>
+        </div>
+      </div>
+
+      <div class="frame" role="img" aria-label="Homepage preview in the Gradient Pop style">
+        <div class="bar"><i></i><i></i><i></i><span class="url">yourname.dev</span></div>
+        <div class="site b-site">
+          <div class="b-blob b-blob--1" aria-hidden="true"></div>
+          <div class="b-blob b-blob--2" aria-hidden="true"></div>
+          <div class="b-blob b-blob--3" aria-hidden="true"></div>
+          <div class="b-nav">
+            <span class="b-logo"><span class="b-mark">YN</span>Your Name</span>
+            <span class="b-links"><span>Blog</span><span>Projects</span><span>About</span><span class="b-cta">Subscribe</span></span>
+          </div>
+          <div class="b-hero">
+            <p class="b-chip"><span class="b-dot"></span>Fresh post every Friday</p>
+            <h3 class="b-h">Making tech feel <span class="b-grad">simple</span> — one post at a time</h3>
+            <p class="b-sub">Friendly guides to code, AI and careers in tech, for curious people at every level.</p>
+            <div class="b-ctas"><span class="b-btn">Start reading</span><span class="b-btn b-btn--light">Join the newsletter</span></div>
+          </div>
+          <div class="b-posts">
+            <p class="b-label">Latest posts ✨</p>
+            <div class="b-grid">
+              <div class="b-card"><span class="b-tag b-tag--v">AI</span><h4>5 AI tools I actually use every day</h4><p class="b-meta">6 min read</p></div>
+              <div class="b-card"><span class="b-tag b-tag--p">Career</span><h4>How I’d learn to code if I started again</h4><p class="b-meta">8 min read</p></div>
+              <div class="b-card"><span class="b-tag b-tag--o">Tutorial</span><h4>Build your first API in 30 minutes</h4><p class="b-meta">12 min read</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== C ===================== -->
+    <section class="dir wrap" id="c" aria-labelledby="c-title">
+      <div class="dir-head">
+        <div class="dir-title">
+          <span class="letter letter--c" aria-hidden="true">C</span>
+          <div>
+            <h2 id="c-title">Brutalist Bold</h2>
+            <p>Stark black and white with one loud colour, chunky borders, hard shadows and oversized type. Edgy, confident and hard to forget.</p>
+            <p class="best"><b>Best for:</b> strong opinions and standing out from every other developer blog.</p>
+          </div>
+        </div>
+        <div class="spec">
+          <ul class="swatches" aria-label="Colour palette">
+            <li style="background:#fffdf2" title="#FFFDF2"></li>
+            <li style="background:#0a0a0a" title="#0A0A0A"></li>
+            <li style="background:#ffe500" title="#FFE500"></li>
+          </ul>
+          <p class="fonts"><b>Archivo Black</b> + <b>IBM Plex Mono</b></p>
+        </div>
+      </div>
+
+      <div class="frame" role="img" aria-label="Homepage preview in the Brutalist Bold style">
+        <div class="bar"><i></i><i></i><i></i><span class="url">yourname.dev</span></div>
+        <div class="site c-site">
+          <div class="c-nav">
+            <span class="c-logo">YN.</span>
+            <span class="c-links"><span>Blog</span><span>Projects</span><span>About</span><span>Subscribe</span></span>
+          </div>
+          <div class="c-marquee" aria-hidden="true">
+            <span class="c-track">WEB DEV ✦ AI ✦ CAREERS ✦ OPEN SOURCE ✦ BUILDING IN PUBLIC ✦ WEB DEV ✦ AI ✦ CAREERS ✦ OPEN SOURCE ✦ BUILDING IN PUBLIC ✦&nbsp;</span>
+          </div>
+          <div class="c-hero">
+            <div class="c-sticker" aria-hidden="true">HELLO,<br>WORLD!</div>
+            <h3 class="c-h">No fluff. <span class="c-mark">Real lessons</span> from building software.</h3>
+            <p class="c-sub">Straight-talking posts about code, careers and the messy middle of making things. No hype, no gatekeeping.</p>
+            <div class="c-ctas"><span class="c-btn">Read the blog</span><span class="c-btn c-btn--white">Subscribe</span></div>
+          </div>
+          <div class="c-posts">
+            <div class="c-card"><p class="c-num">01</p><h4>Stop chasing every new framework</h4><p class="c-meta">Opinion · 5 min</p></div>
+            <div class="c-card"><p class="c-num">02</p><h4>My honest first year in tech</h4><p class="c-meta">Career · 7 min</p></div>
+            <div class="c-card"><p class="c-num">03</p><h4>Ship it ugly, then iterate</h4><p class="c-meta">Process · 4 min</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== D ===================== -->
+    <section class="dir wrap" id="d" aria-labelledby="d-title">
+      <div class="dir-head">
+        <div class="dir-title">
+          <span class="letter letter--d" aria-hidden="true">D</span>
+          <div>
+            <h2 id="d-title">Editorial Tech</h2>
+            <p>A magazine-style layout with giant serif headlines, a strong grid, newspaper rules and one vivid accent colour. Thoughtful and premium.</p>
+            <p class="best"><b>Best for:</b> long-form writing and a brand that feels like its own publication.</p>
+          </div>
+        </div>
+        <div class="spec">
+          <ul class="swatches" aria-label="Colour palette">
+            <li style="background:#f4efe6" title="#F4EFE6"></li>
+            <li style="background:#141414" title="#141414"></li>
+            <li style="background:#ff4a1c" title="#FF4A1C"></li>
+            <li style="background:#666666" title="#666666"></li>
+          </ul>
+          <p class="fonts"><b>Fraunces</b> + <b>Inter</b></p>
+        </div>
+      </div>
+
+      <div class="frame" role="img" aria-label="Homepage preview in the Editorial Tech style">
+        <div class="bar"><i></i><i></i><i></i><span class="url">yourname.dev</span></div>
+        <div class="site d-site">
+          <div class="d-top"><span>Nº 01 · October 2026</span><span>Subscribe →</span></div>
+          <div class="d-mast">
+            <p class="d-name">Your Name</p>
+            <p class="d-tagline">Notes on software, systems &amp; craft</p>
+          </div>
+          <div class="d-nav"><span>Writing</span><span>Projects</span><span>About</span><span>Now</span><span>Contact</span></div>
+          <div class="d-grid">
+            <div class="d-lead">
+              <p class="d-kicker">Featured essay</p>
+              <h3 class="d-h">Why every developer should <em>write</em> in public.</h3>
+              <p class="d-sub">Writing forces clarity. Here’s how a small weekly publishing habit made me a better engineer, and how you can start this week.</p>
+              <div class="d-ctas"><span class="d-btn">Read the essay</span><span class="d-link">Browse all writing</span></div>
+            </div>
+            <div class="d-side">
+              <p class="d-side-title">Latest</p>
+              <div class="d-item"><span class="d-n">1</span><div><h4>The quiet power of boring technology</h4><p class="d-meta">Essay · 8 min</p></div></div>
+              <div class="d-item"><span class="d-n">2</span><div><h4>A field guide to debugging in production</h4><p class="d-meta">Guide · 12 min</p></div></div>
+              <div class="d-item"><span class="d-n">3</span><div><h4>Notes from my first open-source PR</h4><p class="d-meta">Notes · 5 min</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="outro wrap">
+    <div class="box">
+      <h2>Which one feels like you?</h2>
+      <p>Reply in the chat with your pick, e.g. <code>6.1: C</code>, or mix them, e.g. <code>6.1: A, but with B’s gradients</code>. If none of these feel right, tell us what’s missing and we’ll explore new options.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
