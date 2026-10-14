@@ -26,7 +26,7 @@ python3 -m http.server 8000 --bind 0.0.0.0
 
 ## Regenerate and check icons
 
-The generator traces the pale-blue logo in `photo.jpg`; it is tailored to this image, not an arbitrary-photo converter. It preserves the original file and produces flat, crisp icons without adding rounded corners.
+The generator traces the pale-blue logo in `photo.jpg`; it is tailored to this image, not an arbitrary-photo converter. It preserves the original file and produces flat, crisp icons. Browser SVG, PNG, and ICO favicons have rounded blue backgrounds with transparent corners and padding to keep the whole symbol visible. Apple touch and Android icons remain opaque because those platforms apply their own masks. Browser favicon URLs include a version query to refresh cached icons; Google search may take time to recrawl the updated favicon.
 
 ```sh
 python3 -m venv .venv
@@ -37,6 +37,6 @@ python3 -m venv .venv
 
 The checks cover local asset paths, section anchors, embedded font encoding, icon dimensions, and the manifest. They do not check availability of external social links.
 
-## GitHub status
+## Publishing
 
-Work is on `arena/86c2c365-swaidathimannil`, in [pull request #3](https://github.com/swaidathimannil/swaidathimannil/pull/3). Pushing this branch does not merge it into `main` or configure GitHub Pages. The previous upload placeholder has been replaced by the original website.
+Merge the favicon update pull request into `main` to include it in the publishing branch. Pushing a feature branch alone does not deploy the website or configure GitHub Pages.
