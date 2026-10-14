@@ -27,8 +27,8 @@ background = "#48c3ef"
 foreground = "#c5f0ff"
 
 
-def svg(mark_size=84):
-    """Center the logo in a square; maskable exports keep it inside the safe zone."""
+def svg(mark_size=80):
+    """Keep the complete logo inside a rounded square with transparent corners."""
     paths = []
     for contour in contours:
         simplified = cv2.approxPolyDP(contour, 0.7, True).reshape(-1, 2)
@@ -36,12 +36,12 @@ def svg(mark_size=84):
         paths.append("M" + " L".join(f"{x:.3f},{y:.3f}" for x, y in coords) + " Z")
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\n'
             '  <title>Swaid Athimannil logo</title>\n'
-            f'  <path fill="{background}" d="M0 0H100V100H0Z"/>\n'
+            f'  <rect width="100" height="100" rx="20" fill="{background}"/>\n'
             f'  <path fill="{foreground}" d="{" ".join(paths)}"/>\n'
             '</svg>\n')
 
 
-def raster(mark_size, size):
+def raster(mark_size, size, rounded=False):
     # Supersample the same vector contours for antialiased small icons.
     im = Image.new("RGB", (size * 4, size * 4), background)
     draw = ImageDraw.Draw(im)
@@ -49,14 +49,26 @@ def raster(mark_size, size):
         simplified = cv2.approxPolyDP(contour, 0.7, True).reshape(-1, 2)
         coords = ((simplified - center) * mark_size / extent + 50) * size * 4 / 100
         draw.polygon([tuple(point) for point in coords], fill=foreground)
-    return im.resize((size, size), Image.Resampling.LANCZOS)
+    if rounded:
+        # Apply the mask at 4x resolution for smooth transparent edges.
+        mask = Image.new("L", im.size, 0)
+        ImageDraw.Draw(mask).rounded_rectangle(
+            (0, 0, im.width - 1, im.height - 1), radius=size * 4 * 0.20, fill=255)
+        im.putalpha(mask)
+    im = im.resize((size, size), Image.Resampling.LANCZOS)
+    if rounded:
+        # Remove tiny Lanczos halos at the transparent extremes.
+        im.putalpha(im.getchannel("A").point(lambda a: 0 if a < 4 else (255 if a > 251 else a)))
+    return im
 
 
 source = svg()
 (ROOT / "favicon.svg").write_text(source)
 for size in (16, 32, 48):
-    raster(84, size).save(ROOT / f"favicon-{size}x{size}.png", optimize=True)
-raster(84, 48).save(ROOT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+    raster(80, size, rounded=True).save(ROOT / f"favicon-{size}x{size}.png", optimize=True)
+raster(80, 48, rounded=True).save(
+    ROOT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)],
+    append_images=[raster(80, n, rounded=True) for n in (16, 32)])
 # Touch icons have a little more breathing room; no pre-rounded corners.
 for name, size in (("apple-touch-icon.png", 180),
                    ("android-chrome-192x192.png", 192),
