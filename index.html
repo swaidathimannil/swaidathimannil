@@ -224,7 +224,9 @@
   .company-card{background:linear-gradient(135deg,#fff,#edf7f2);border-color:rgba(8,126,93,.18)}
   .company-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:start}
   .company-grid > *{min-width:0}
-  .company-name{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-1.5px;margin:10px 0}
+  .company-heading{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:10px 0}
+  .company-icon{width:64px;height:64px;object-fit:contain;flex:none}
+  .company-name{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-1.5px;margin:0}
   .company-intro p{color:var(--muted);margin:14px 0}
   .company-intro strong{color:var(--ink)}
   .company-tools{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-top:22px}
@@ -421,7 +423,10 @@
     <div class="company-grid">
       <div class="company-intro">
         <span class="sec-label">My Company · AI Automation Studio</span>
-        <h2 id="company-title" class="company-name">Alomato</h2>
+        <div class="company-heading">
+          <img class="company-icon" src="assets/alomato-icon.png" alt="" width="64" height="64" loading="lazy" decoding="async">
+          <h2 id="company-title" class="company-name">Alomato</h2>
+        </div>
         <p><strong>One builder. Real systems.</strong> Alomato is my automation studio, built to take repetitive work off a business's plate — so people can focus on the work only people can do.</p>
         <p>I build lead capture, follow-up, and workflow systems for businesses including interior designers, dental clinics, and real estate. No agency layers: you talk directly to the person building your system.</p>
         <ul class="company-tools" aria-label="Tools and technology">

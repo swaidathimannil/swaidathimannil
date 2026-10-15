@@ -53,6 +53,11 @@ company_match = re.search(r'<section id="company"[^>]*>(.*?)</section>', html, r
 assert company_match is not None, "Missing company section"
 company = Page()
 company.feed(company_match.group(1))
+assert "assets/alomato-icon.png" in company.refs, "Missing Alomato card icon"
+with Image.open(ROOT / "assets/alomato-icon.png") as icon:
+    assert icon.format == "PNG" and icon.size == (128, 128)
+    assert "A" in icon.getbands(), "Preserve the original icon transparency"
+    icon.verify()
 assert "https://swaidathimannil.github.io/alomato/" in company.refs
 assert "https://swaidathimannil.github.io/alomato/#contact" in company.refs
 assert len(re.findall(r"<li>", company_match.group(1))) == 7, "Expected three tools and four process steps"
