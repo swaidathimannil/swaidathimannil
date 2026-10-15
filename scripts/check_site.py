@@ -46,6 +46,17 @@ for ref in page.refs:
     elif url.fragment:
         assert unquote(url.fragment) in page.ids, f"Missing anchor: {ref}"
 
+# The company section is reachable from both the hero and responsive navigation.
+assert "company" in page.ids and "company-title" in page.ids
+assert page.refs.count("#company") >= 2
+company_match = re.search(r'<section id="company"[^>]*>(.*?)</section>', html, re.S)
+assert company_match is not None, "Missing company section"
+company = Page()
+company.feed(company_match.group(1))
+assert "https://swaidathimannil.github.io/alomato/" in company.refs
+assert "https://swaidathimannil.github.io/alomato/#contact" in company.refs
+assert len(re.findall(r"<li>", company_match.group(1))) == 7, "Expected three tools and four process steps"
+
 assert "data:image/" not in html, "Old embedded images remain"
 assert 'href="site.webmanifest"' in html
 assert 'href="favicon.svg?v=rounded-2"' in html
@@ -94,4 +105,4 @@ for icon in manifest["icons"]:
     with Image.open(ROOT / icon["src"]) as im:
         assert icon["sizes"] == f"{im.width}x{im.height}"
         assert im.format == "PNG"
-print("PASS: local assets, section anchors, embedded fonts, SVG, ICO, PNG sizes, transparent rounded corners, unclipped logo, and manifest.")
+print("PASS: company section and links, local assets, section anchors, embedded fonts, SVG, ICO, PNG sizes, transparent rounded corners, unclipped logo, and manifest.")
