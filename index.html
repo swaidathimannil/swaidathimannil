@@ -220,6 +220,25 @@
   .bento h3{font-size:1.12rem;margin-bottom:8px}
   .bento p{color:var(--muted);font-size:.93rem}
 
+  /* company */
+  .company-card{background:linear-gradient(135deg,#fff,#edf7f2);border-color:rgba(8,126,93,.18)}
+  .company-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:start}
+  .company-grid > *{min-width:0}
+  .company-name{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-1.5px;margin:10px 0}
+  .company-intro p{color:var(--muted);margin:14px 0}
+  .company-intro strong{color:var(--ink)}
+  .company-tools{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-top:22px}
+  .company-tools li{font-size:.78rem;font-weight:700;color:var(--accent-deep);background:rgba(8,126,93,.08);border-radius:999px;padding:6px 12px}
+  .company-process h3{font-size:1rem;margin:8px 0 14px}
+  .company-process ol{list-style:none;counter-reset:company-step}
+  .company-process li{counter-increment:company-step;display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+  .company-process li::before{content:"0" counter(company-step);color:var(--accent-deep);font-weight:800;font-size:.78rem;padding-top:3px;flex:0 0 22px}
+  .company-process strong{display:block;color:var(--ink);margin-bottom:3px}
+  .company-card .cta-row{margin-top:30px}
+  .company-link{color:var(--accent-deep);text-underline-offset:3px}
+  .company-link:hover{text-decoration-thickness:2px}
+  @media(max-width:760px){.company-grid{grid-template-columns:1fr;gap:24px}}
+
   /* journey */
   .story-note{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:36px}
   .timeline{
@@ -313,6 +332,7 @@
   <ul id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#company">Company</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#now">Now</a></li>
     <li class="follow-link"><a href="#follow">Follow Along</a></li>
@@ -331,7 +351,7 @@
   <div class="typing"><span class="sr-only">AI Automation Builder</span><span aria-hidden="true"><span id="typed">AI Automation Builder</span><span class="cursor" hidden></span></span></div>
   <p class="hero-sub">
     I'm <strong>Swaid Athimannil</strong> — a young Muslim entrepreneur designing AI automation
-    systems for real businesses, and building in public: <strong>the wins, the failures, and the lessons</strong>, all shared honestly.
+    systems for real businesses through <a class="company-link" href="#company">Alomato</a>, and building in public: <strong>the wins, the failures, and the lessons</strong>, all shared honestly.
   </p>
   <div class="cta-row">
     <a class="btn btn-primary" href="#journey">Read my story →</a>
@@ -391,6 +411,38 @@
       <div class="ico" aria-hidden="true">⚙️</div>
       <h3>Workflow Systems</h3>
       <p>Repetitive staff work — reminders, records, reporting — handed to machines so the team can focus on people.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section id="company" class="reveal" aria-labelledby="company-title">
+  <div class="card company-card">
+    <div class="company-grid">
+      <div class="company-intro">
+        <span class="sec-label">My Company · AI Automation Studio</span>
+        <h2 id="company-title" class="company-name">Alomato</h2>
+        <p><strong>One builder. Real systems.</strong> Alomato is my automation studio, built to take repetitive work off a business's plate — so people can focus on the work only people can do.</p>
+        <p>I build lead capture, follow-up, and workflow systems for businesses including interior designers, dental clinics, and real estate. No agency layers: you talk directly to the person building your system.</p>
+        <ul class="company-tools" aria-label="Tools and technology">
+          <li>n8n</li>
+          <li>AI agents</li>
+          <li>No-code stacks</li>
+        </ul>
+      </div>
+      <div class="company-process">
+        <h3>From audit to ongoing support.</h3>
+        <ol>
+          <li><div><strong>Find the gaps</strong>A free 20-minute audit to see where time and leads are slipping through.</div></li>
+          <li><div><strong>Build the system</strong>Connect WhatsApp, email, CRM, and calendars with the tools you already use.</div></li>
+          <li><div><strong>Test and hand over</strong>Test before launch, then show your team how everything runs.</div></li>
+          <li><div><strong>Keep it running</strong>Support and updates as your business and workflows change.</div></li>
+        </ol>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://swaidathimannil.github.io/alomato/">Visit Alomato <span aria-hidden="true">→</span></a>
+      <a class="btn btn-soft" href="https://swaidathimannil.github.io/alomato/#contact">Explore the free audit</a>
     </div>
   </div>
 </section>
