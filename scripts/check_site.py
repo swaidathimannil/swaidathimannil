@@ -104,6 +104,12 @@ with Image.open(ROOT / "favicon.ico") as im:
     assert im.ico.sizes() == {(16, 16), (32, 32), (48, 48)}
     for size in im.ico.sizes():
         check_rounded(im.ico.getimage(size))
+# Social handles stay in sync with the live channels, including renames.
+assert "https://instagram.com/alomato.auto" in page.refs, "Missing Alomato Instagram link"
+assert "https://m.youtube.com/@alomato.automation" in page.refs, "Missing Malayalam YouTube link"
+assert not any("aiautomation" in ref or "swaidathimannil_malayalam" in ref for ref in page.refs), \
+    "Old social handle left behind"
+
 manifest = json.loads((ROOT / "site.webmanifest").read_text())
 assert manifest["start_url"] == manifest["scope"] == "./"
 for icon in manifest["icons"]:
